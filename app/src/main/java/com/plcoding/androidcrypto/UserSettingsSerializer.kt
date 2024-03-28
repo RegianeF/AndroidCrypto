@@ -3,16 +3,15 @@ package com.plcoding.androidcrypto
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.datastore.core.Serializer
+import com.plcoding.androidcrypto.ui.CryptoManager2
 import kotlinx.serialization.SerializationException
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.io.InputStream
 import java.io.OutputStream
 
 @RequiresApi(Build.VERSION_CODES.M)
 class UserSettingsSerializer(
-    private val cryptoManager: CryptoManager
+    private val cryptoManager: CryptoManager2
 ) : Serializer<UserSettings> {
 
     override val defaultValue: UserSettings
